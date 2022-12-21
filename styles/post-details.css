@@ -1,0 +1,112 @@
+/* Стилизація проєкта -*/
+/* post-details.html - блок з інфою про пост зверху. Коментарі - по 4 в ряд.*/
+/* Всі елементи котрі характеризують users, posts, comments візуалізувати, так, щоб було видно що це блоки*/
+/* (дати фон. марджини і тд)*/
+.info {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    column-gap: 1vw;
+    row-gap: 2vh;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background: #0d0f37;
+    color: #b9badb;
+}
+
+.postInfo {
+    margin-top: 1vh;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+.postInfo h2 {
+    color: #c13238;
+}
+
+.postInfoDiv {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1vh;
+    background: #423bab;
+    border-radius: 15px;
+    width: 50vw;
+    height: 30vh;
+}
+
+.title, .body {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+.postComments {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1vh;
+    flex-direction: column;
+}
+
+.list {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1vh;
+    column-gap: 1vw;
+    flex-wrap: wrap;
+}
+
+.postComments h3 {
+    color: #c13238;
+}
+
+.comment {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 23vw;
+    height: 50vh;
+    background: #252160;
+    border-radius: 10px;
+    row-gap: 1vh;
+    margin-left: 0.5vw;
+}
+
+.userDiv {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 0.5vw;
+    height: 15vh;
+}
+
+.commentBody {
+    display: flex;
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: #423bab;
+    border-radius: 10px;
+    height: 30vh;
+    width: 22vw;
+    margin-top: 1vh;
+ }

@@ -1,0 +1,40 @@
+/* Стилизація проєкта -*/
+/* index.html - всі блоки з user - по 2 в рядок. кнопки/посилавння розташувати під інформацією про user.*/
+/* Всі елементи котрі характеризують users, posts, comments візуалізувати, так, щоб було видно що це блоки*/
+/* (дати фон. марджини і тд)*/
+.info {
+    box-sizing: border-box;
+    display: flex;
+    column-gap: 1vw;
+    row-gap: 2vh;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background: #0d0f37;
+    color: #b9badb;
+}
+
+.user {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    height: 18.4vh;
+    width: 45vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background: #423bab;
+    border-radius: 15px;
+    color: #b9badb;
+}
+
+.button {
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #c13238;
+    background: #c13238;
+    color: #b9badb;
+    width: 40vw;
+}
