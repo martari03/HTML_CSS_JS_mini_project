@@ -18,19 +18,6 @@ fetch('https://jsonplaceholder.typicode.com/users/' + id)
             h2.innerText = `${user.id}. ${user.name}`
             userInfo.appendChild(h2);
             let ul = document.createElement('ul');
-            // function builder(obj) {
-            //     for (const element in obj) {
-            //         const li = document.createElement('li');
-            //         if (typeof obj[element] !== 'object') {
-            //             li.innerText = `${element.toUpperCase()}: ${obj[element]}`;
-            //             ul.appendChild(li);
-            //         } else {
-            //             builder(obj[element]);
-            //         }
-            //     }
-            // }
-            // userInfo.appendChild(ul);
-            // builder(user);
             for (const element in user) {
                 const li = document.createElement('li');
                 if (typeof user[element] !== 'object') {

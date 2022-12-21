@@ -49,6 +49,7 @@
     justify-content: center;
     flex-direction: column;
     row-gap: 1vh;
+    width: 90%;
 }
 
 .postComments {
@@ -85,7 +86,6 @@
     background: #252160;
     border-radius: 10px;
     row-gap: 1vh;
-    margin-left: 0.5vw;
 }
 
 .userDiv {
@@ -96,6 +96,7 @@
     justify-content: flex-start;
     margin-left: 0.5vw;
     height: 15vh;
+    width: 90%;
 }
 
 .commentBody {
@@ -108,5 +109,4 @@
     border-radius: 10px;
     height: 30vh;
     width: 22vw;
-    margin-top: 1vh;
  }
