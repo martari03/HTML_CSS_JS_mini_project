@@ -99,6 +99,11 @@
     width: 90%;
 }
 
+.userInfo {
+    font-family: "Roboto Light", serif;
+    font-size: 14px;
+}
+
 .commentBody {
     display: flex;
     box-sizing: border-box;

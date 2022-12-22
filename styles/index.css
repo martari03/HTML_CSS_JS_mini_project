@@ -2,9 +2,9 @@
 /* index.html - всі блоки з user - по 2 в рядок. кнопки/посилавння розташувати під інформацією про user.*/
 /* Всі елементи котрі характеризують users, posts, comments візуалізувати, так, щоб було видно що це блоки*/
 /* (дати фон. марджини і тд)*/
-body {
-    background: #0d0f37;
-}
+/*body {*/
+/*    background: #0d0f37;*/
+/*}*/
 
 .info {
     box-sizing: border-box;
@@ -17,8 +17,6 @@ body {
     align-content: center;
     background: #0d0f37;
     color: #b9badb;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
 }
 
 .user {
@@ -26,7 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 1vh;
-    height: 18vh;
+    height: 17vh;
     width: 45vw;
     align-items: center;
     justify-content: center;
@@ -34,6 +32,7 @@ body {
     background: #423bab;
     border-radius: 15px;
     color: #b9badb;
+    margin: 4px;
 }
 
 .button {

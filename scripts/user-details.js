@@ -5,6 +5,8 @@
 // 6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html,
 // котра має детальну інфу про поточний пост.
 let info = document.querySelector('.info');
+let userContainer = document.createElement('div');
+userContainer.classList.add('userDiv');
 let userInfo = document.createElement('div');
 userInfo.classList.add('user');
 let postsInfo = document.createElement('div');
@@ -47,11 +49,13 @@ fetch('https://jsonplaceholder.typicode.com/users/' + id)
                 }
                 ul.appendChild(li);
                 userInfo.append(h2, ul);
+                userContainer.appendChild(userInfo);
             }
             let postsButton = document.createElement('button');
             postsButton.classList.add('button');
-            postsButton.innerText = 'Posts of current user'
-            info.append(userInfo, postsButton);
+            postsButton.innerText = 'Posts of current user';
+            userContainer.appendChild(postsButton);
+            info.append(userContainer);
             postsButton.onclick = function () {
                 fetch("https://jsonplaceholder.typicode.com/users/" + id + "/posts")
                     .then(response => response.json())
@@ -78,6 +82,7 @@ fetch('https://jsonplaceholder.typicode.com/users/' + id)
                         }
                         info.appendChild(postsInfo);
                     });
+                postsButton.disabled = true;
             }
         }
     );
