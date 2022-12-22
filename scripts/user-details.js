@@ -17,7 +17,7 @@ fetch('https://jsonplaceholder.typicode.com/users/' + id)
     .then(request => request.json())
     .then(user => {
             let h2 = document.createElement('h2');
-            h2.innerText = `${user.id}. ${user.name}`
+            h2.innerText = `${user.id}. ${user.name}`;
             userInfo.appendChild(h2);
             let ul = document.createElement('ul');
             for (const element in user) {

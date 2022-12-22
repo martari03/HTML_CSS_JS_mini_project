@@ -81,8 +81,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 23vw;
-    height: 50vh;
+    width: 18vw;
+    height: 55vh;
     background: #252160;
     border-radius: 10px;
     row-gap: 1vh;
@@ -112,6 +112,6 @@
     flex-direction: column;
     background: #423bab;
     border-radius: 10px;
-    height: 30vh;
-    width: 22vw;
+    height: 35vh;
+    width: 17vw;
  }
