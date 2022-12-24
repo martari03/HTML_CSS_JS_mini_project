@@ -14,6 +14,11 @@
     align-content: center;
     background: #0d0f37;
     color: #b9badb;
+    height: 100vh;
+}
+
+.userDiv.none, .posts.none {
+    display: none;
 }
 
 .userDiv {
@@ -23,7 +28,6 @@
     justify-content: center;
     flex-direction: column;
     row-gap: 4vh;
-    height: 100vh;
 }
 
 .user {
@@ -89,6 +93,23 @@
     row-gap: 2vh;
     align-items: center;
     justify-content: center;
+}
+
+.btnHolder {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.previous {
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #c13238;
+    background: #c13238;
+    color: #b9badb;
+    margin-top: 1vh;
+    margin-right: 1vw;
 }
 
 .container {

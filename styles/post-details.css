@@ -21,8 +21,7 @@
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    row-gap: 1vh;
+    column-gap: 3vw;
 }
 
 .postInfo h2 {
@@ -36,7 +35,7 @@
     justify-content: center;
     flex-direction: column;
     row-gap: 1vh;
-    background: #423bab;
+    background: #252160;
     border-radius: 15px;
     width: 50vw;
     height: 30vh;
@@ -50,6 +49,11 @@
     flex-direction: column;
     row-gap: 1vh;
     width: 90%;
+}
+
+.body {
+    border-radius: 15px;
+    background: #423bab;
 }
 
 .postComments {
@@ -75,6 +79,33 @@
     color: #c13238;
 }
 
+.btnHolder {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: flex-end;
+    column-gap: 1vw;
+}
+
+.previous {
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #c13238;
+    background: #c13238;
+    color: #b9badb;
+    margin-top: 1vh;
+    margin-right: 1vw;
+}
+
+.first {
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #c13238;
+    background: #c13238;
+    color: #b9badb;
+    margin-top: 1vh;
+}
+
 .comment {
     box-sizing: border-box;
     display: flex;
@@ -82,7 +113,7 @@
     align-items: center;
     justify-content: center;
     width: 18vw;
-    height: 55vh;
+    height: 48.7vh;
     background: #252160;
     border-radius: 10px;
     row-gap: 1vh;
@@ -101,17 +132,21 @@
 
 .userInfo {
     font-family: "Roboto Light", serif;
-    font-size: 14px;
+    font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .commentBody {
     display: flex;
     box-sizing: border-box;
+    font-family: "Roboto Light", serif;
+    font-size: 14px;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
     background: #423bab;
     border-radius: 10px;
-    height: 35vh;
+    height: 28.7vh;
     width: 17vw;
  }

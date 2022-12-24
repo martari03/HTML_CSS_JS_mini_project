@@ -4,36 +4,46 @@
 // (для получения постов используйте эндпоинт https://jsonplaceholder.typicode.com/users/USER_ID/posts)
 // 6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html,
 // котра має детальну інфу про поточний пост.
-let info = document.querySelector('.info');
-let userContainer = document.createElement('div');
+const info = document.querySelector('.info');
+const userContainer = document.createElement('div');
 userContainer.classList.add('userDiv');
-let userInfo = document.createElement('div');
+const userInfo = document.createElement('div');
 userInfo.classList.add('user');
-let postsInfo = document.createElement('div');
+const postsInfo = document.createElement('div');
 postsInfo.classList.add('posts');
-let url = new URL(location.href);
-let id = url.searchParams.get("id");
+const url = new URL(location.href);
+const id = url.searchParams.get("id");
+const btnHolder = document.createElement('div');
+btnHolder.classList.add('btnHolder');
+const toPreviousPage = document.createElement('button');
+toPreviousPage.innerText = 'To previous page';
+toPreviousPage.classList.add('previous')
+toPreviousPage.onclick = function (){
+    location.href = './index.html';
+}
+btnHolder.appendChild(toPreviousPage);
+info.appendChild(btnHolder);
 fetch('https://jsonplaceholder.typicode.com/users/' + id)
     .then(request => request.json())
     .then(user => {
-            let h2 = document.createElement('h2');
+            const h2 = document.createElement('h2');
             h2.innerText = `${user.id}. ${user.name}`;
             userInfo.appendChild(h2);
-            let ul = document.createElement('ul');
+            const ul = document.createElement('ul');
             for (const element in user) {
                 const li = document.createElement('li');
                 if (typeof user[element] !== 'object') {
                     li.innerHTML = `<b>${element.toUpperCase()}</b>: ${user[element]}`;
                 } else {
-                    li.innerHTML = `<b>${element.toUpperCase()}:</b>`
-                    let ul2 = document.createElement('ul');
+                    li.innerHTML = `<b>${element.toUpperCase()}:</b>`;
+                    const ul2 = document.createElement('ul');
                     for (const key in user[element]) {
                         const li2 = document.createElement('li');
                         if (typeof user[element][key] !== 'object') {
                             li2.innerHTML = `<b>${key.toUpperCase()}</b>: ${user[element][key]}`;
                         } else {
                             li2.innerHTML = `<b>${key.toUpperCase()}</b>:`;
-                            let ul3 = document.createElement('ul');
+                            const ul3 = document.createElement('ul');
                             for (const item in user[element][key]) {
                                 const li3 = document.createElement('li');
                                 if (typeof user[element][key][item] !== 'object') {
@@ -51,33 +61,40 @@ fetch('https://jsonplaceholder.typicode.com/users/' + id)
                 userInfo.append(h2, ul);
                 userContainer.appendChild(userInfo);
             }
-            let postsButton = document.createElement('button');
+            const postsButton = document.createElement('button');
             postsButton.classList.add('button');
             postsButton.innerText = 'Posts of current user';
             userContainer.appendChild(postsButton);
             info.append(userContainer);
             postsButton.onclick = function () {
+                userContainer.classList.add('none');
+                toPreviousPage.innerText = 'Return to info about user';
                 fetch("https://jsonplaceholder.typicode.com/users/" + id + "/posts")
                     .then(response => response.json())
                     .then(posts => {
-                        let titles = document.createElement('div');
+                        const titles = document.createElement('div');
                         titles.classList.add('container');
-                        let userName = document.createElement('h2');
+                        const userName = document.createElement('h2');
                         userName.innerText = `Posts of ${user.name}:`;
                         for (const post of posts) {
-                            let postDetails = document.createElement('div');
+                            const postDetails = document.createElement('div');
                             postDetails.classList.add('postDetails');
-                            let titleElement = document.createElement('div');
+                            const titleElement = document.createElement('div');
                             titleElement.classList.add('post');
                             titleElement.innerText = `${post.title}`;
-                            let details = document.createElement('button');
+                            const details = document.createElement('button');
                             details.classList.add('details');
                             details.innerText = 'Post details';
                             postDetails.append(titleElement, details);
                             titles.appendChild(postDetails);
                             postsInfo.append(userName, titles);
                             details.onclick = function () {
-                                location.href = `post-details.html?post=${JSON.stringify(post)}`;
+                                location.href = `post-details.html?post=${post.userId}`;
+                            }
+                            toPreviousPage.onclick = function () {
+                                postsInfo.classList.add('none');
+                                userContainer.classList.remove('none');
+                                toPreviousPage.innerText = 'To previous page';
                             }
                         }
                         info.appendChild(postsInfo);
@@ -85,4 +102,4 @@ fetch('https://jsonplaceholder.typicode.com/users/' + id)
                 postsButton.disabled = true;
             }
         }
-    );
+    )
