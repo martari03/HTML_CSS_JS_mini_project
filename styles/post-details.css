@@ -13,6 +13,7 @@
     align-content: center;
     background: #0d0f37;
     color: #b9badb;
+    position: relative;
 }
 
 .postInfo {
@@ -113,10 +114,11 @@
     align-items: center;
     justify-content: center;
     width: 18vw;
-    height: 48.7vh;
+    height: 47.7vh;
     background: #252160;
     border-radius: 10px;
     row-gap: 1vh;
+    margin-bottom: 1vh;
 }
 
 .userDiv {
@@ -130,23 +132,19 @@
     width: 90%;
 }
 
-.userInfo {
+.userInfo, .commentBody {
     font-family: "Roboto Light", serif;
-    font-size: 13px;
-    display: flex;
-    flex-wrap: wrap;
+    font-size: 14px;
 }
 
 .commentBody {
     display: flex;
     box-sizing: border-box;
-    font-family: "Roboto Light", serif;
-    font-size: 14px;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
     background: #423bab;
     border-radius: 10px;
-    height: 28.7vh;
+    height: 27.7vh;
     width: 17vw;
  }
