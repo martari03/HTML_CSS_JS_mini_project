@@ -144,6 +144,7 @@
     justify-content: flex-start;
     flex-direction: column;
     background: #423bab;
+    padding: 4px;
     border-radius: 10px;
     height: 27.7vh;
     width: 17vw;
